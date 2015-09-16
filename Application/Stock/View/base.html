@@ -1,0 +1,25 @@
+<block name="customCSS">
+</block>
+<block name="body">
+  <body style="display:none">
+    <block name="sidebar">
+    </block>
+    <block name="content">
+    </block>
+    <block name="footer">
+      <footer>
+      </footer>
+    </block>
+    <script type="text/javascript">
+      window.onload=function(){
+        $("#preloader").remove();
+        $("body").show();
+        <block name="onload">
+        </block>
+      }
+    </script>
+    <block name="customJS">
+    </block>
+  </body>
+</block>
+</html>

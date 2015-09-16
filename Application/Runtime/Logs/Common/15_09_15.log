@@ -1,0 +1,48 @@
+[ 2015-09-15T20:55:54+08:00 ] 127.0.0.1 /favicon.ico
+ERR: 无法加载模块:Favicon
+
+[ 2015-09-15T20:57:30+08:00 ] 127.0.0.1 /Public/css/font.css
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T20:57:30+08:00 ] 127.0.0.1 /Public/css/materialize.min.css
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T20:57:30+08:00 ] 127.0.0.1 /Public/css/style.css
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T20:57:30+08:00 ] 127.0.0.1 /Public/js/materialize.min.js
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T20:57:30+08:00 ] 127.0.0.1 /Public/css/font-awesome-4.3.0/css/font-awesome.min.css
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T20:57:30+08:00 ] 127.0.0.1 /Public/js/jquery-2.1.1.min.js
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T20:57:31+08:00 ] 127.0.0.1 /Public/css/font-awesome-4.3.0/css/font-awesome.min.css
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T20:57:31+08:00 ] 127.0.0.1 /Public/css/materialize.min.css
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T20:57:31+08:00 ] 127.0.0.1 /Public/css/font.css
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T20:57:31+08:00 ] 127.0.0.1 /Public/js/materialize.min.js
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T20:57:31+08:00 ] 127.0.0.1 /Public/js/jquery-2.1.1.min.js
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T20:57:31+08:00 ] 127.0.0.1 /Public/css/style.css
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T21:17:01+08:00 ] 127.0.0.1 /favicon.ico
+ERR: 无法加载模块:Favicon
+
+[ 2015-09-15T21:17:07+08:00 ] 127.0.0.1 /favicon.ico
+ERR: 无法加载模块:Favicon
+
+[ 2015-09-15T21:17:08+08:00 ] 127.0.0.1 /favicon.ico
+ERR: 无法加载模块:Favicon
+

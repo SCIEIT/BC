@@ -1,23 +1,51 @@
 <block name="customCSS">
 </block>
-<block name="body">
-  <body style="display:none">
-    <block name="sidebar">
-    </block>
-    <block name="content">
-    </block>
-    <block name="footer">
-      <footer>
-      </footer>
-    </block>
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $("#preloader").remove();
-        $("body").show();
-      });
-    </script>
-    <block name="customJS">
-    </block>
-  </body>
+<body style="display:none">
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="<?=U('home/index/index')?>" class="brand-logo">logo</a>
+      <block name="sidebar">
+      <ul id="nav-mobile" class="side-nav">
+        <li><a class="waves-effect" href="<?=U('home/list/catebase')?>">Paper List</a></li>
+        <li><a class="waves-effect" href="<?=U('home/upload/papers')?>">Paper Upload</a></li>
+      </ul>
+      </block>
+      <block name="navbar">
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="fa fa-navicon"></i><!-- <i class="material-icons">menu</i> --></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a class="waves-effect" href="<?=U('home/list/catebase')?>">Paper List</a></li>
+        <li><a class="waves-effect" href="<?=U('home/upload/papers')?>">Paper Upload</a></li>
+      </ul>
+      </block>
+    </div>
+    </nav>
 </block>
+<block name="body">
+</block>
+<footer class="page-footer teal">
+  <block name="footercontent">
+  </block>
+  <div class="footer-copyright">
+    <div class="container">
+    By <a class="brown-text text-lighten-3" href="http://www.scieit.tk">IT Club</a>
+    </div>
+  </div>
+</footer>
+  <!--  Scripts-->
+<block name="customJS">
+</block>
+<script>
+  window.onload=function(){
+    $("#preloader").remove();
+    $("body").show();
+  }
+</script>
+<block name="navJS">
+  <script>
+    $(document).ready(function(){
+      $('.button-collapse').sideNav();
+    });
+  </script>
+</block>
+</body>
 </html>

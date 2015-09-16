@@ -1,0 +1,12 @@
+[ 2015-09-16T15:45:23+08:00 ] 127.0.0.1 /favicon.ico
+ERR: 无法加载模块:Favicon
+
+[ 2015-09-16T15:45:34+08:00 ] 127.0.0.1 /favicon.ico
+ERR: 无法加载模块:Favicon
+
+[ 2015-09-16T15:49:08+08:00 ] 127.0.0.1 /index.php/favicon.ico
+ERR: 无法加载模块:Favicon
+
+[ 2015-09-16T19:08:58+08:00 ] 127.0.0.1 /favicon.ico
+ERR: 无法加载模块:Favicon
+
