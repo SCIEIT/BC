@@ -24,11 +24,14 @@ class TestController extends BaseController {
     }
     public function update(){
     	if(IS_POST){
-    		if($id=I('post.questionid')){
-    			$this->ajaxReturn(D('questions')->delete($id));
+    		if($id=I('post.question_id')){
+    			D('questions')->delete($id);
+    		}
+    		if(D('questions')->data($_POST)->add()){
+    			echo true;
     		}
     	}else{
-    		redirect(U('test/index'));
+    		$this->ajaxReturn(false);
     	}
     }
 }

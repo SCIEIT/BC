@@ -24,8 +24,8 @@
 </block>
 
   <h2 class="center-align">题目列表</h2>
-  <div class="container">
-    <ul class="collapsible popout" data-collapsible="accordion">
+  <div class="container" id="escaped">
+    <ul class="collapsible popout" data-collapsible="accordion" id="list">
     <?php $count=1?>
       <?php  $arr=array('','A','B','C','D','E'); foreach ($questions as $number => $question) {?> 
        <li id='<?=$question['question_id']?>'>
@@ -39,8 +39,10 @@
          <div class="collapsible-body">
           <blockquote><?=$question['question_content']?></blockquote>
           <input type="hidden" name="ismc" value="<?=($question['choice_num']>0);?>">
-          <hr/>
+          <input type="hidden" name="ans" value="<?=$question['question_ans'];?>">
+          <input type="hidden" name="group" value="<?=$question['question_group'];?>">
           <?php if($question['choice_num']>0){ ?>
+          <hr/>
           <div class="container">
           <table>
             <tbody>
@@ -60,13 +62,7 @@
      </ul>
      <br/>
      <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-         <a class="btn-floating btn-large green">
-           <i class="fa fa-pencil"></i>
-         </a>
-         <ul>
-           <li><button id="add" class="btn-floating blue"><i class="fa fa-plus"></i></button></li>
-           <li><button id="submit" class="btn-floating lime darken-4"><i class="fa fa-paper-plane"></i></button></li>
-         </ul>
+         <button id="add" class="btn-floating btn-large blue"><i class="fa fa-plus"></i></button>
       </div>
   </div>
   <div class="container">
@@ -78,6 +74,7 @@
               <label for="questioncontent">题目内容</label>
             </div>
           </div>
+          <input type="hidden" value="" id="editid"/>
           <div class="center-align switch">
               <label>
                 选择
@@ -121,17 +118,36 @@
   <script type="text/javascript" src="/Public/ueditor/ueditor.all.min.js"></script>
   <script>
     function submitQuestion(){
-      if(document.getElementByID('ismc').checked){
-
-      }else{
-
+      var question=new Object();
+      if(""!=$('#editid').val()){
+        question.question_id=$('#editid').val();
       }
+      question.question_content=escape($('#questioncontent').val());
+      if(!document.getElementById("ismc").checked){
+        question.choice_num=$("#numselector").val();
+        for(var i=1;i<=question.choice_num;++i){
+          eval("question.choice_"+i+"=escape($(\"#choice_"+i+"\").val());");
+        }
+        question.question_ans=$("#correctans").val();
+      }else{
+        question.choice_num='0';
+      }
+      $.post("<?=U('test/update');?>",question,function(data){
+          if(data==true){
+            $('#editid').val("");
+            Materialize.toast('更新成功', 4000);
+            location.reload();
+          }else{
+            Materialize.toast('失败', 4000);
+          }
+        });
     }
+    document.getElementById('escaped').innerHTML=unescape(document.getElementById('escaped').innerHTML);
     $(function(){
       $(document).ready(function() {
           $('select').material_select();
         });
-      //$("#editor").toggle();
+      $("#editor").toggle();
       $('#questioncontent').trigger('autoresize');
       $("i[name='deletebtn']").click(function(){
         var question=$(this).parents("li[id]");
@@ -147,7 +163,9 @@
         });
       });
       $("i[name='editbtn']").click(function(){
-        $(this).parents("li[id]").attr('id');
+        Materialize.toast('开启编辑模式', 4000);
+        $('#editid').val($(this).parents("li[id]").attr('id'));
+        $("#editor").toggle();
       });
       $("#ismc").click(function(){
         if(this.checked){
@@ -158,13 +176,22 @@
       });
       $("#numselector").change(function(){
         $("#choicecontainer").empty();
+        $("#choicecontainer").append("<div class=\"row\"> <div class=\"input-field col s12\"> <select id=\"correctans\"> <option value=\"\" disabled selected>请选择正确答案</option> </select> </div> </div>");
+        for(var i=1;i<=$(this).val();++i){
+          $("#correctans").append("<option value="+i+">"+i+"</option>");
+        }
+        $('#correctans').material_select();
         for(var i=1;i<=$(this).val();++i){
           $("#choicecontainer").append(" <div class=\"row\"><div class=\"input-field col s12\">  <textarea id=\"choice_"+i+"\" class=\"materialize-textarea\" length=\"500\"></textarea>  <label for=\"choice_"+i+"\">选项："+i+"</label> </div></div>");
         }
       });
+      $("#add").click(function(){
+        $('#editid').val("");
+        Materialize.toast('添加新题', 4000);
+        $("#editor").toggle();
+      });
       $("#finish").click(function(){
         submitQuestion();
-        Materialize.toast('成功保存', 4000);
       });
     });
   </script>
