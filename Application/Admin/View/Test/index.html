@@ -1,35 +1,142 @@
 <extend name="./Application/Admin/View/base.html"/>
 <block name="body">
-    <div class="col s10">
-        <h2 class="center-align">管理员登陆</h2>
-    </div>
-    <br/>
-    <div class="row">
-        <form class="container" action="<?=U('admin/login/index')?>" enctype="multipart/form-data" method="post">
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="admin_id" name="admin_id" type="text" class="validate">
-              <label for="admin_id">管理员ID</label>
-            </div>
+  <h2 class="center-align">题目列表</h2>
+  <div class="container">
+    <ul class="collapsible popout" data-collapsible="accordion" id="list">
+    <?php $count=1?>
+      <?php 
+      $arr=array('','A','B','C','D','E');
+      foreach ($questions as $number => $question) {?> 
+       <li id='<?=$question['question_id']?>'>
+         <div class="collapsible-header">
+          Question <?=$count?>
+          <div class="right">
+          <i class="fa fa-trash-o" name="deletebtn"></i>
+          <i class="fa fa-pencil-square-o" name="editbtn"></i>
           </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="admin_password" name="admin_password" type="password" class="validate">
-              <label for="admin_password">密码</label>
-            </div>
+         </div>
+         <div class="collapsible-body">
+          <blockquote><?=$question['question_content']?></blockquote>
+          <input type="hidden" name="ismc" value="<?=($question['choice_num']>0);?>">
+          <input type="hidden" name="ans" value="<?=$question['question_ans'];?>">
+          <input type="hidden" name="group" value="<?=$question['question_group'];?>">
+          <hr/>
+          <?php if($question['choice_num']>0){  ?>
+          <div class="container">
+          <table>
+            <tbody>
+            <?php
+             for($i=1;$i<=$question['choice_num'];++$i){?>
+              <tr>
+                <td <?=$i==$question['question_ans']?'class="red-text text-darken-2"':''?>><?=$arr[$i].'. '.$question['choice_'.$i];?></td>
+              </tr>
+            <?php } ?>
+            </tbody>
+          </table>
           </div>
-          <div class="row">
-             <div class="input_field col s6">
-                <p>
-                        <input type="checkbox" id="remember" name='remember'/>
-                        <label for="remember">记住登录</label>
-                </p>
-             </div>
-             <button class="btn waves-effect waves-light col s6" type="submit" name="action">提交
-            </button>
-            </div>
-        </form>
+          <?php }?>
+         </div>
+       </li>
+       <?php $count++; }?>
+     </ul>
+     <br/>
+     <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+         <a class="btn-floating btn-large green">
+           <i class="fa fa-pencil"></i>
+         </a>
+         <ul>
+           <li><button id="add" class="btn-floating blue"><i class="fa fa-plus"></i></button></li>
+           <li><button id="submit" class="btn-floating lime darken-4"><i class="fa fa-paper-plane"></i></button></li>
+         </ul>
       </div>
+  </div>
+  <div class="container">
+    <div class="row">
+        <div class="col s12" id="editor">
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="questioncontent" class="materialize-textarea" length="500"></textarea>
+              <label for="questioncontent">题目内容</label>
+            </div>
+          </div>
+          <div class="center-align switch">
+              <label>
+                选择
+                <input id="ismc" type="checkbox">
+                <span class="lever"></span>
+                填空
+              </label>
+          </div>
+          <div id="mceditor">
+              <div class="input-field col s12">
+                <select id="numselector">
+                  <option value="" disabled selected>请选择选项数量</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                <label>选项数量</label>
+              </div>
+            <div id="choicecontainer" class="container">
+            </div>
+          </div>
+          <div class="center-align">
+          <button class="btn waves-effect waves-light" id="finish">Finish</button></div>
+        </div>
+      </div>
+  </div>
 </block>
 <block name="customJS">
+  <js href="__PUBLIC__/ueditor/ueditor.config.js" />    
+  <js href="__PUBLIC__/ueditor/ueditor.all.min.js" />
+  <script>
+    function submitQuestion(){
+      if(document.getElementByID('ismc').checked){
+        $("#list").append("<li id='<?=$question['question_id']?>'>         <div class="collapsible-header">          Question <?=$count?>          <div class=\"right\">          <i class=\"fa fa-trash-o\" name=\"deletebtn\"></i>          <i class=\"fa fa-pencil-square-o\" name=\"editbtn\"></i>          </div>         </div>         <div class=\"collapsible-body\">          <blockquote><?=$question['question_content']?></blockquote>          <input type=\"hidden\" name=\"ismc\" value=\"<?=($question['choice_num']>0);?>\">          <input type=\"hidden\" name=\"ans\" value=\"<?=$question['question_ans'];?>\">          <input type=\"hidden\" name=\"group\" value=\"<?=$question['question_group'];?>\">          <hr/>          <?php if($question['choice_num']>0){  ?>          <div class=\"container\">          <table>            <tbody>            <?php             for($i=1;$i<=$question['choice_num'];++$i){?>              <tr>                <td <?=$i==$question['question_ans']?'class=\"red-text text-darken-2\"':''?>><?=$arr[$i].'. '.$question['choice_'.$i];?></td>              </tr>            <?php } ?>            </tbody>          </table>          </div>          <?php }?>         </div>       </li>");
+      }else{
+        $("#list").append()
+      }
+    }
+    $(function(){
+      $(document).ready(function() {
+          $('select').material_select();
+        });
+      //$("#editor").toggle();
+      $('#questioncontent').trigger('autoresize');
+      $("i[name='deletebtn']").click(function(){
+        var question=$(this).parents("li[id]");
+        $.get("<?=U('test/delete');?>",{
+          questionid:question.attr('id')
+        },function(data){
+          if(data==true){
+            Materialize.toast('成功删除', 4000);
+            question.remove();
+          }else{
+            Materialize.toast('删除失败', 4000);
+          }
+        });
+      });
+      $("i[name='editbtn']").click(function(){
+        $(this).parents("li[id]").attr('id');
+      });
+      $("#ismc").click(function(){
+        if(this.checked){
+          $("#mceditor").hide();
+        }else{
+          $("#mceditor").show();
+        }
+      });
+      $("#numselector").change(function(){
+        $("#choicecontainer").empty();
+        for(var i=1;i<=$(this).val();++i){
+          $("#choicecontainer").append(" <div class=\"row\"><div class=\"input-field col s12\">  <textarea id=\"choice_"+i+"\" class=\"materialize-textarea\" length=\"500\"></textarea>  <label for=\"choice_"+i+"\">选项："+i+"</label> </div></div>");
+        }
+      });
+      $("#finish").click(function(){
+        submitQuestion();
+        Materialize.toast('成功保存', 4000);
+      });
+    });
+  </script>
 </block>

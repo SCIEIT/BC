@@ -10,3 +10,21 @@ ERR: 无法加载模块:Favicon
 [ 2015-09-16T19:08:58+08:00 ] 127.0.0.1 /favicon.ico
 ERR: 无法加载模块:Favicon
 
+[ 2015-09-16T19:29:35+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+ERR: 无法加载模块:Favicon
+
+[ 2015-09-16T19:47:17+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000540s ]
+ERR: 无法加载模块:Favicon
+
+[ 2015-09-16T20:39:04+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+ERR: 无法加载模块:Favicon
+
