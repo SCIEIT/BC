@@ -1,0 +1,112 @@
+[ 2015-10-09T13:04:13+08:00 ] 127.0.0.1 /index.php/User/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000529s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000651s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017444s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017608s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000513s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000673s ]
+SQL: SHOW COLUMNS FROM `grouptoquestion` [ RunTime:0.0041s ]
+SQL: SELECT COUNT(grouptoquestion.question_ans) AS tp_count FROM `grouptoquestion` INNER JOIN questions on questions.question_id=grouptoquestion.question_id  WHERE ( group_id=1 and questions.choice_num>0 ) LIMIT 1   [ RunTime:0.0590s ]
+SQL: SHOW COLUMNS FROM `questions` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(question_id) AS tp_count FROM `questions` WHERE ( choice_num>0 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(question_id) AS tp_count FROM `questions` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(question_id) AS tp_count FROM `grouptoquestion` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `settings` [ RunTime:0.0023s ]
+SQL: SELECT `value` FROM `settings` WHERE `key` = 'QuestionDeadline' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0022s ]
+SQL: SELECT `news_content` FROM `news` WHERE `news_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `stock` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `stock`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `stock_trend` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `stock_trend` WHERE ( stock_id=3 and time <=1444367053 ) ORDER BY time  [ RunTime:0.0071s ]
+SQL: SELECT MAX(time) AS tp_max FROM `stock_trend` WHERE ( stock_id=3 and time <=1444367053 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 3 AND `time` = 1444269600 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT MAX(time) AS tp_max FROM `stock_trend` WHERE ( stock_id=3 and time<1444269600 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 3 AND `time` = 1444262400 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `stock_trend` WHERE ( stock_id=4 and time <=1444367053 ) ORDER BY time  [ RunTime:0.0002s ]
+SQL: SELECT MAX(time) AS tp_max FROM `stock_trend` WHERE ( stock_id=4 and time <=1444367053 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 4 AND `time` = 1444276800 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT MAX(time) AS tp_max FROM `stock_trend` WHERE ( stock_id=4 and time<1444276800 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 4 AND `time` = 1444269600 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `stock_trend` WHERE ( stock_id=5 and time <=1444367053 ) ORDER BY time  [ RunTime:0.0002s ]
+SQL: SELECT MAX(time) AS tp_max FROM `stock_trend` WHERE ( stock_id=5 and time <=1444367053 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 5 AND `time` = 1444276800 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT MAX(time) AS tp_max FROM `stock_trend` WHERE ( stock_id=5 and time<1444276800 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 5 AND `time` = 1444273200 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.140976s ]
+NOTIC: [8] Undefined variable: timeleft D:\Programing\Web_WorkSpace\BC\Application\Runtime\Cache\User\d7a7632f153cf12d0db44c934c28bcfe.php 第 144 行.
+NOTIC: [8] Undefined variable: timetotal D:\Programing\Web_WorkSpace\BC\Application\Runtime\Cache\User\d7a7632f153cf12d0db44c934c28bcfe.php 第 149 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054062s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.107211s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000028s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.160666s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\User\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\User\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\User\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.016843s ]
+INFO: [ app_end ] --END-- [ RunTime:0.017005s ]
+
+[ 2015-10-09T13:04:21+08:00 ] 127.0.0.1 /index.php/User/stock/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000396s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000497s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000165s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005317s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005423s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000430s ]
+SQL: SHOW COLUMNS FROM `stock` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `stock`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `stock_trend` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `stock_trend` WHERE ( stock_id=3 and time <=1444367061 ) ORDER BY time  [ RunTime:0.0003s ]
+SQL: SELECT MAX(time) AS tp_max FROM `stock_trend` WHERE ( stock_id=3 and time <=1444367061 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 3 AND `time` = 1444269600 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT MAX(time) AS tp_max FROM `stock_trend` WHERE ( stock_id=3 and time<1444269600 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 3 AND `time` = 1444262400 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `stock_trend` WHERE ( stock_id=4 and time <=1444367061 ) ORDER BY time  [ RunTime:0.0003s ]
+SQL: SELECT MAX(time) AS tp_max FROM `stock_trend` WHERE ( stock_id=4 and time <=1444367061 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 4 AND `time` = 1444276800 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT MAX(time) AS tp_max FROM `stock_trend` WHERE ( stock_id=4 and time<1444276800 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 4 AND `time` = 1444269600 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `stock_trend` WHERE ( stock_id=5 and time <=1444367061 ) ORDER BY time  [ RunTime:0.0003s ]
+SQL: SELECT MAX(time) AS tp_max FROM `stock_trend` WHERE ( stock_id=5 and time <=1444367061 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 5 AND `time` = 1444276800 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT MAX(time) AS tp_max FROM `stock_trend` WHERE ( stock_id=5 and time<1444276800 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 5 AND `time` = 1444273200 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.043692s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018228s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.028329s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000028s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.046238s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\User\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\User\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\User\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000564s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000658s ]
+

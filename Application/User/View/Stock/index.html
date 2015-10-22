@@ -1,0 +1,72 @@
+<extend name="./Application/User/View/base.html"/>
+<block name="customCSS">
+  <link rel="stylesheet" href="__PUBLIC__/chartist/chartist.min.css">
+</block>
+<block name="body">
+  <div class="container" id="escaped">
+  <blockquote class="flow-text">当前账户余额：{$money}</blockquote>
+  <br/>
+  <form class="container" action="<?=U('stock/update')?>" enctype="multipart/form-data" method="post">
+<!--       <ul class="collapsible popout" data-collapsible="accordion"> -->
+        <?php
+         foreach ($stocks['stocks'] as $stock) { 
+          $ratio=($stock['current']['price']-$stock['last']['price'])/$stock['last']['price'];?>
+<!--           <li> -->
+            <h4 class="">{$stock.stock_name}  <i class="fa fa-line-chart"></i></h4>
+<!--             </div>
+            <div class="collapsible-body"> -->
+            <br/>
+              <div class="container">
+                <div id="chart<?=$stock['stock_id']?>"></div>
+              </div>
+              <div class="container">
+                <h5>股价：<?=isset($stock['current']['time'])?($stock['current']['price'].' ('.date('Y年m月d日 H:i',$stock['current']['time']).')'):'暂未上市'?><span class="badge new <?=$ratio>0?'red': ($ratio==0?'grey':'green')?>"><?=round($ratio ,2)?>%</span></h5>
+                <blockquote>{$stock.current.news}</blockquote>
+                <p>已持有：{$stock.hold|default="0"}股</p>
+              </div>
+              <div class="input-field col s6">
+                        <i class="fa fa-cny prefix"></i>
+                        <input id="{$stock.stock_id}" name="{$stock.stock_id}" type="number" class="validate">
+                        <label for="{$stock.stock_id}">购买、卖出（购买请用正表示，卖出请用负表示）</label>
+                      </div>
+              <hr/>
+<!--             </div>
+          </li> -->
+          <?php } ?>
+<!--       </ul> -->
+      <div class="container">
+        <button class="btn waves-effect waves-light red accent-3" type="submit">提交
+          <i class="fa fa-bar-chart right"></i>
+        </button>
+      </div>
+    </form>
+    <br/>
+  </div>
+</block>
+<block name="customJS">
+  <script src="__PUBLIC__/chartist/chartist.min.js"></script>
+  <script>
+  <?php foreach ($stocks['stocks'] as $key=>$stock) {?>
+    $(function() {
+          new Chartist.Line('#chart<?=$stock['stock_id']?>', {
+            labels: [<?php for($i=1;$i<=count($stock['trend']);++$i){ echo "'$i', "; } ?>],
+            series: [{
+              name:'<?=$stock['stock_name']?>',
+              data: [<?php foreach ($stock['trend'] as $year) { ?>'<?=$year['price']?>',<?php  } ?>]
+            },{
+              name:'<?=$stock['stock_name']?>',
+              data: [<?php foreach ($stock['trend'] as $year) { ?><?=$year['price']?>,<?php  } ?>]
+            }
+            ]
+          }, {
+            fullWidth: true,
+            chartPadding: {
+                right: 40
+              },
+              lineSmooth: false,
+              height:440,
+          });
+      });
+        <?php } ?>
+  </script>
+</block>

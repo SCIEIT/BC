@@ -1,0 +1,57 @@
+<extend name="./Application/Admin/View/base.html"/>
+<block name="customCSS">
+	<link rel="stylesheet" href="__PUBLIC__/chartist/chartist.min.css">
+</block>
+<block name="body">
+	<br/>
+	<div class="container row">
+	    <div class="col s12">
+	    	<h4>各组当前的现金。</h4>
+        	<div id="money"></div>
+		</div>
+	</div>
+	<hr/>
+	<br/>
+	<div class="container row">
+	    <div class="col s12">
+	    	<h4>各组当前股票市值。</h4>
+        	<div id="stock"></div>
+		</div>
+	</div>
+	<hr/>
+</block>
+<block name="customJS">
+	<script src="__PUBLIC__/chartist/chartist.min.js"></script>
+	<script>
+		$(function(){
+			new Chartist.Bar('#money', {
+			  labels: [<?php foreach ($groupresult['cash'] as $group) {
+			  	echo '\''.$group['group_name'].'\',';
+			  } ?>],
+			  series: [<?php foreach ($groupresult['cash'] as $group) {
+			  	echo '\''.$group['amount'].'\',';
+			  } ?>]
+			}, {
+			  distributeSeries: true,
+			  height:450
+			});
+			new Chartist.Bar('#stock', {
+			  labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+			  series: [
+			    [800000, 1200000, 1400000, 1300000],
+			    [200000, 400000, 500000, 300000],
+			    [100000, 200000, 400000, 600000]
+			  ]
+			}, {
+			  stackBars: true,
+			  height:450
+			}).on('draw', function(data) {
+			  if(data.type === 'bar') {
+			    data.element.attr({
+			      style: 'stroke-width: 30px'
+			    });
+			  }
+			});
+		});
+	</script>
+</block>

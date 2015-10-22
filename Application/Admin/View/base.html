@@ -3,20 +3,28 @@
 <body style="display:none">
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="<?=U('home/index/index')?>" class="brand-logo">logo</a>
+      <a id="logo-container" href="<?=U('admin/index/index')?>" class="brand-logo">MyBC</a>
       <block name="sidebar">
       <ul id="nav-mobile" class="side-nav">
         <li><a class="waves-effect" href="<?=U('index/index')?>">主页</a></li>
+        <li><a class="waves-effect" href="<?=U('news/index')?>">公告</a></li>
+        <li><a class="waves-effect" href="<?=U('news/instruction')?>">免责声明</a></li>
+        <li><a class="waves-effect" href="<?=U('user/usrlist')?>">选手</a></li>
         <li><a class="waves-effect" href="<?=U('stock/index')?>">股票</a></li>
         <li><a class="waves-effect" href="<?=U('test/index')?>">题目</a></li>
+        <li><a class="waves-effect" href="<?=U('result/index')?>">结果</a></li>
       </ul>
       </block>
       <block name="navbar">
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="fa fa-navicon"></i><!-- <i class="material-icons">menu</i> --></a>
       <ul class="right hide-on-med-and-down">
         <li><a class="waves-effect" href="<?=U('index/index')?>">主页</a></li>
+        <li><a class="waves-effect" href="<?=U('news/index')?>">公告</a></li>
+        <li><a class="waves-effect" href="<?=U('news/instruction')?>">免责声明</a></li>
+        <li><a class="waves-effect" href="<?=U('user/usrlist')?>">选手</a></li>
         <li><a class="waves-effect" href="<?=U('stock/index')?>">股票</a></li>
         <li><a class="waves-effect" href="<?=U('test/index')?>">题目</a></li>
+        <li><a class="waves-effect" href="<?=U('result/index')?>">结果</a></li>
       </ul>
       </block>
     </div>

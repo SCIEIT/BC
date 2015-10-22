@@ -60,7 +60,7 @@ class LoginController extends BaseController {
     	}else{
     		cookie('userMobile',null);
     		cookie('userPassword',null);
-    		redirect(U('Login/index'),['error'=>'用户名或密码错误']);
+    		redirect(U('Login/index',['error'=>'用户名或密码错误']));
     	}
     }
     public function Login(){
@@ -74,6 +74,9 @@ class LoginController extends BaseController {
     			cookie('userMobile',$mobile,3600000);
     			cookie('userPassword',$this->encrypt($password),3600000);
     		}
+            if(D('users')->where(['user_id'=>session('user.id')])->getField('instruction_read')=='0'){
+                redirect(U('user/index/instruction'));
+            }
     		redirect($url);
     	}else{
     		redirect(U('Login/index',['error'=>'请填写用户名和密码']));

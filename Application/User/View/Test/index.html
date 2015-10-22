@@ -1,0 +1,57 @@
+<extend name="./Application/User/View/base.html"/>
+<block name="body">
+  <h2 class="center-align">请在仔细阅读规则后答题</h2>
+  <div class="container" id="escaped">
+    <blockquote>
+      所有选手都需要回答20道单选题<br/>
+      单人选手需要回答两道案例分析题中的一道，三道论文题中的一道<br/>
+      成组选手需要回答两道简答题，两道案例分析题中的一道，三道论文题中的两道
+    </blockquote>
+    <br/>
+    <div class="container">
+     <form action="<?=U('test/submit')?>" enctype="multipart/form-data" method="post">
+      <div id="mc">
+        <?php
+        $arr=array('','A','B','C','D','E');
+         foreach ($MCQ as $question) { ?>
+          <div class="container">
+            <h5 class="blue-text">{$question.question_content}</h5>
+            <?php for($i=1;$i<=$question['choice_num'];++$i) { ?>
+              <p>
+                <input class="with-gap" name="<?=$question['question_id']?>" type="radio" id="<?=$question['question_id']?>_<?=$i?>" value="<?=$i?>"<?=$question['question_ans']==$i?'checked ':''?>/>
+                <label for="<?=$question['question_id']?>_<?=$i?>"><?=$arr[$i]?>. <?=$question['choice_'.$i]?></label>
+              </p>
+            <?php } ?>
+          </div>
+        <?php } ?>
+      </div>
+      <hr/>
+      <div id="structure">
+      <?php foreach ($SQ as $question) { ?>
+        <div class="container">
+          <blockquote>{$question.question_content}</blockquote>
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea name="<?=$question['question_id']?>" id="structure_<?=$question['question_id']?>" class="materialize-textarea">{$question.question_ans}</textarea>
+              <label for="structure_<?=$question['question_id']?>">请填写答案</label>
+            </div>
+          </div>
+        </div>
+        <br/>
+        <br/>
+      <?php } ?>
+      </div>
+      <div class="row">
+       <button class="btn waves-effect waves-light col s12" type="submit" ><i class="fa fa-save"></i> 保存</button>
+      </div>
+     </form>
+    </div>
+  </div>
+</block>
+<block name="customJS">
+  <script>
+    $(function(){
+          document.getElementById('escaped').innerHTML=unescape(document.getElementById('escaped').innerHTML);
+    });
+  </script>
+</block>

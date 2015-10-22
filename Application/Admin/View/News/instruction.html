@@ -1,0 +1,28 @@
+<extend name="./Application/Admin/View/base.html"/>
+<block name="body">
+    <div class="col s10">
+        <h2 class="center-align">免责声明</h2>
+    </div>
+    <br/>
+    <div class="row">
+        <form class="container" action="<?=U('news/instruction')?>" enctype="multipart/form-data" method="post">
+          <script id="container" name="content" type="text/plain">
+                <?=html_entity_decode($news)?>
+          </script>
+          <br/>
+           <button class="btn waves-effect waves-light col s6" type="submit">提交
+          </button>
+        </form>
+      </div>
+</block>
+<block name="customJS">
+      <js href="__PUBLIC__/ueditor/ueditor.config.js" />    
+      <js href="__PUBLIC__/ueditor/ueditor.all.min.js" />
+      <script>
+      $(function(){
+          var ue = UE.getEditor('container',{
+              serverUrl :'{:U('admin/news/ueditor')}'
+          });
+      })
+      </script>
+</block>

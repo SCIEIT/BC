@@ -3,7 +3,7 @@
 <body style="display:none">
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="<?=U('home/index/index')?>" class="brand-logo">logo</a>
+      <a id="logo-container" href="<?=U('admin/index/index')?>" class="brand-logo">MyBC</a>
       
 
       
@@ -48,7 +48,7 @@
   
   <div class="footer-copyright">
     <div class="container">
-    By <a class="brown-text text-lighten-3" href="http://www.scieit.tk">IT Club</a>
+    By IT Club: <a class="brown-text text-lighten-3" href="http://www.scieit.tk">www.scieit.tk</a>
     </div>
   </div>
 </footer>

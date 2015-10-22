@@ -1,0 +1,72 @@
+<block name="customCSS">
+</block>
+<body style="display:none">
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="<?=U('index/index')?>" class="brand-logo"><img id="img" src="__PUBLIC__/logo.jpg"/></a>
+      <block name="sidebar">
+      <ul id="nav-mobile" class="side-nav">
+        <li><a class="waves-effect" href="<?=U('index/index')?>">主页</a></li>
+        <li><a class="waves-effect" href="<?=U('stock/index')?>">股票</a></li>
+        <li><a class="waves-effect" href="<?=U('test/index')?>">答题</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li>
+              <a class="waves-effect collapsible-header">用户</a>
+              <div class="collapsible-body" style>
+                <ul>
+                <li><a href="<?=U('user/password')?>">更改密码</a></li>
+                <li><a href="<?=U('home/login/logout')?>">登出</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+      </li>
+      </ul>
+      </block>
+      <block name="navbar">
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a href="<?=U('user/password')?>">更改密码</a></li>
+        <li><a href="<?=U('home/login/logout')?>">登出</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="fa fa-navicon"></i><!-- <i class="material-icons">menu</i> --></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a class="waves-effect" href="<?=U('index/index')?>">主页</a></li>
+        <li><a class="waves-effect" href="<?=U('stock/index')?>">股票</a></li>
+        <li><a class="waves-effect" href="<?=U('test/index')?>">答题</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">用户</a></li>
+      </ul>
+      </block>
+    </div>
+    </nav>
+</block>
+<block name="body">
+</block>
+<footer class="page-footer teal">
+  <block name="footercontent">
+  </block>
+  <div class="footer-copyright">
+    <div class="container">
+    By IT Club: <a class="brown-text text-lighten-3" href="http://www.scieit.tk">www.scieit.tk</a>
+    </div>
+  </div>
+</footer>
+  <!--  Scripts-->
+<block name="customJS">
+</block>
+<script>
+  window.onload=function(){
+    $("#preloader").remove();
+    $("body").show();
+  }
+</script>
+<block name="navJS">
+  <script>
+    $(document).ready(function(){
+      $('.button-collapse').sideNav();
+      $('#img').css('height',$('#img').parents('nav').height());
+    });
+  </script>
+</block>
+</body>
+</html>

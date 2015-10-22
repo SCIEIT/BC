@@ -1,0 +1,1137 @@
+[ 2015-10-11T15:52:31+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000679s ]
+
+[ 2015-10-11T15:52:31+08:00 ] 127.0.0.1 /index.php/Admin/login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000439s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000171s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015684s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015791s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000343s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000430s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.045634s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044573s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.001322s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000025s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.045572s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000507s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000600s ]
+
+[ 2015-10-11T15:52:33+08:00 ] 127.0.0.1 /index.php/admin/login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000440s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `admins` WHERE `admin_id` = 1 AND `admin_password` = 'test' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-10-11T15:52:34+08:00 ] 127.0.0.1 /index.php/Admin/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000444s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000258s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006313s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006428s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000427s ]
+SQL: SHOW COLUMNS FROM `stock` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `stock`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `stock_trend` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 3 ORDER BY time  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 4 ORDER BY time  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 5 ORDER BY time  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0027s ]
+SQL: SELECT `news_content` FROM `news` WHERE `news_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.057470s ]
+NOTIC: [8] Undefined variable: stockheld D:\Programing\Web_WorkSpace\BC\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 42 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given D:\Programing\Web_WorkSpace\BC\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 42 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020719s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.048628s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.069085s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000598s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000688s ]
+
+[ 2015-10-11T15:52:37+08:00 ] 127.0.0.1 /index.php/Admin/test/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000391s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000528s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000190s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005836s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005950s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000590s ]
+SQL: SHOW COLUMNS FROM `questions` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `questions`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.027674s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020180s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.011992s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.031742s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001231s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001434s ]
+
+[ 2015-10-11T15:52:39+08:00 ] 127.0.0.1 /index.php/Admin/stock/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005832s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005934s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000391s ]
+SQL: SHOW COLUMNS FROM `stock` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `stock`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `stock_trend` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 3 ORDER BY time  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 4 ORDER BY time  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 5 ORDER BY time  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000249s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.027737s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019700s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.016186s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000028s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.035630s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000577s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000678s ]
+
+[ 2015-10-11T15:52:43+08:00 ] 127.0.0.1 /index.php/Admin/stock/add/id/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000389s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000447s ]
+SQL: SHOW COLUMNS FROM `stock_trend` [ RunTime:0.0031s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('5','0','0','新建新闻') [ RunTime:0.0673s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005503s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000411s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000457s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000547s ]
+
+[ 2015-10-11T15:52:44+08:00 ] 127.0.0.1 /index.php/Admin/stock/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000450s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005104s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005204s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000400s ]
+SQL: SHOW COLUMNS FROM `stock` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `stock`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `stock_trend` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 3 ORDER BY time  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 4 ORDER BY time  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 5 ORDER BY time  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.019659s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012170s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.015886s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.027878s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000665s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000808s ]
+
+[ 2015-10-11T15:53:06+08:00 ] 127.0.0.1 /index.php/Admin/stock/update.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000452s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000440s ]
+SQL: SHOW COLUMNS FROM `stock` [ RunTime:0.0039s ]
+SQL: UPDATE `stock` SET `stock_name`='测试股票1',`stock_bg`='测试1' WHERE `stock_id` = 3 [ RunTime:0.0800s ]
+SQL: SHOW COLUMNS FROM `stock_trend` [ RunTime:0.0045s ]
+SQL: DELETE FROM `stock_trend` WHERE `stock_id` = 3 [ RunTime:0.0602s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','0','0','新建新闻') [ RunTime:0.0773s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','0','0','新建新闻') [ RunTime:0.0323s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','0','0','新建新闻') [ RunTime:0.0223s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','0','0','新建新闻') [ RunTime:0.0322s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','0','0','新建新闻') [ RunTime:0.0219s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','0','0','新建新闻') [ RunTime:0.0324s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','1444262400','1000','新建新闻') [ RunTime:0.0224s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','1444269600','2310','新建新闻') [ RunTime:0.0323s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','1444701600','3432','新建新闻') [ RunTime:0.0223s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','1445644800','0','新建新闻') [ RunTime:0.0322s ]
+SQL: UPDATE `stock` SET `stock_name`='测试股票2',`stock_bg`='测试' WHERE `stock_id` = 4 [ RunTime:0.0223s ]
+SQL: DELETE FROM `stock_trend` WHERE `stock_id` = 4 [ RunTime:0.0325s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('4','1444269600','1000','新建新闻') [ RunTime:0.0299s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('4','1444276800','100','新建新闻') [ RunTime:0.0142s ]
+SQL: UPDATE `stock` SET `stock_name`='测试股票3',`stock_bg`='测试信息' WHERE `stock_id` = 5 [ RunTime:0.0322s ]
+SQL: DELETE FROM `stock_trend` WHERE `stock_id` = 5 [ RunTime:0.0224s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('5','1444550400','0','新建新闻') [ RunTime:0.0339s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('5','1444183200','100','新建新闻') [ RunTime:0.0164s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('5','1444273200','1000','新建新闻') [ RunTime:0.0322s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('5','1444276800','500','新建新闻') [ RunTime:0.0225s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000214s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006457s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006557s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000463s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000555s ]
+
+[ 2015-10-11T15:53:07+08:00 ] 127.0.0.1 /index.php/Admin/stock/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000423s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005603s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005701s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000390s ]
+SQL: SHOW COLUMNS FROM `stock` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `stock`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `stock_trend` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 3 ORDER BY time  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 4 ORDER BY time  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 5 ORDER BY time  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000151s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.020713s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013570s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.016493s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000029s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.029815s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000583s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000683s ]
+
+[ 2015-10-11T16:41:09+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000374s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000523s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000619s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005509s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005605s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000363s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000461s ]
+SQL: SHOW COLUMNS FROM `stock` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `stock`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `stock_trend` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 3 ORDER BY time  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 4 ORDER BY time  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 5 ORDER BY time  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0031s ]
+SQL: SELECT `news_content` FROM `news` WHERE `news_id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.028834s ]
+NOTIC: [8] Undefined variable: stockheld D:\Programing\Web_WorkSpace\BC\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 42 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given D:\Programing\Web_WorkSpace\BC\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 42 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008292s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.024734s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.032737s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001220s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001402s ]
+
+[ 2015-10-11T16:41:12+08:00 ] 127.0.0.1 /index.php/Admin/test/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000417s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000748s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000883s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005793s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005948s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000476s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000573s ]
+SQL: SHOW COLUMNS FROM `questions` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `questions`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.016976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007417s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.012805s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000029s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.019752s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000694s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000799s ]
+
+[ 2015-10-11T16:41:15+08:00 ] 127.0.0.1 /index.php/Admin/result/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000423s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000655s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006651s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006754s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000460s ]
+SQL: SHOW COLUMNS FROM `groups` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `groups` INNER JOIN grouptoasset on groups.group_id=grouptoasset.group_id  WHERE grouptoasset.asset_id = 1  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `groups`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `grouptostock` [ RunTime:0.0027s ]
+SQL: SELECT `stock_id`,sum(num_change) FROM `grouptostock` WHERE `group_id` = 1 GROUP BY stock_id  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.025354s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011335s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.017316s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000075s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.028502s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000780s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000895s ]
+
+[ 2015-10-11T21:03:02+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000094s ]
+INFO: [ app_init ] --END-- [ RunTime:0.034185s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.017539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018021s ]
+
+[ 2015-10-11T21:03:03+08:00 ] 127.0.0.1 /index.php/Admin/login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000082s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001481s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002125s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002586s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000216s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000637s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.178496s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.178962s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.011197s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011585s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.2782s ]
+SQL: SELECT * FROM `admins` WHERE `admin_id` = 1 AND `admin_password` = 'test' LIMIT 1   [ RunTime:0.0943s ]
+
+[ 2015-10-11T21:03:04+08:00 ] 127.0.0.1 /index.php/Admin/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000115s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001650s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003065s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000264s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000753s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028026s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028624s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001681s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002175s ]
+SQL: SHOW COLUMNS FROM `stock` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `stock`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `stock_trend` [ RunTime:0.0086s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 3 ORDER BY time  [ RunTime:0.0552s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 4 ORDER BY time  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 5 ORDER BY time  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0112s ]
+SQL: SELECT `news_content` FROM `news` WHERE `news_id` = 1 LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000234s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.233687s ]
+NOTIC: [8] Undefined variable: stockheld D:\Programing\Web_WorkSpace\BC\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 42 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given D:\Programing\Web_WorkSpace\BC\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 42 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.117162s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.172826s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000104s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.288386s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.017369s ]
+INFO: [ app_end ] --END-- [ RunTime:0.017793s ]
+
+[ 2015-10-11T21:03:08+08:00 ] 127.0.0.1 /index.php/admin/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000375s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000752s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000915s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007780s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007878s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000465s ]
+SQL: SHOW COLUMNS FROM `stock` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `stock`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `stock_trend` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 3 ORDER BY time  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 4 ORDER BY time  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 5 ORDER BY time  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0065s ]
+SQL: SELECT `news_content` FROM `news` WHERE `news_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.040344s ]
+NOTIC: [8] Undefined variable: stockheld D:\Programing\Web_WorkSpace\BC\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 42 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given D:\Programing\Web_WorkSpace\BC\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 42 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027458s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.036967s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.064056s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000560s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000650s ]
+
+[ 2015-10-11T21:03:21+08:00 ] 127.0.0.1 /index.php/admin/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000736s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000855s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000157s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007151s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007259s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000368s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000456s ]
+SQL: SHOW COLUMNS FROM `stock` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `stock`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `stock_trend` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 3 ORDER BY time  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 4 ORDER BY time  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 5 ORDER BY time  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0035s ]
+SQL: SELECT `news_content` FROM `news` WHERE `news_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.030048s ]
+NOTIC: [8] Undefined variable: stockheld D:\Programing\Web_WorkSpace\BC\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 42 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given D:\Programing\Web_WorkSpace\BC\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 42 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007617s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.026778s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000028s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.034041s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000660s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000752s ]
+
+[ 2015-10-11T21:04:13+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000088s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001565s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002817s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000232s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000808s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022403s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022955s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001854s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002335s ]
+SQL: SHOW COLUMNS FROM `stock` [ RunTime:0.0109s ]
+SQL: SELECT * FROM `stock`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `stock_trend` [ RunTime:0.0116s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 3 ORDER BY time  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 4 ORDER BY time  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 5 ORDER BY time  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0103s ]
+SQL: SELECT `news_content` FROM `news` WHERE `news_id` = 1 LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000233s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.090838s ]
+NOTIC: [8] Undefined variable: stockheld D:\Programing\Web_WorkSpace\BC\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 42 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given D:\Programing\Web_WorkSpace\BC\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 42 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020907s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.077901s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000100s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.096703s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002380s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002760s ]
+
+[ 2015-10-11T21:05:05+08:00 ] 127.0.0.1 /index.php/Admin/test/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000647s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000151s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006092s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006194s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000420s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000508s ]
+SQL: SHOW COLUMNS FROM `questions` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `questions`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.025969s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018793s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.011263s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000076s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.029789s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000841s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000966s ]
+
+[ 2015-10-11T21:05:06+08:00 ] 127.0.0.1 /index.php/Admin/stock/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000662s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005254s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005356s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000475s ]
+SQL: SHOW COLUMNS FROM `stock` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `stock`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `stock_trend` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 3 ORDER BY time  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 4 ORDER BY time  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 5 ORDER BY time  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.048538s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024011s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.033915s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000028s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.057615s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000927s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001162s ]
+
+[ 2015-10-11T21:05:18+08:00 ] 127.0.0.1 /index.php/Admin/stock/add/id/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000647s ]
+SQL: SHOW COLUMNS FROM `stock_trend` [ RunTime:0.0027s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('5','0','0','新建新闻') [ RunTime:0.0801s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000214s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019728s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000498s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000566s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000666s ]
+
+[ 2015-10-11T21:05:19+08:00 ] 127.0.0.1 /index.php/Admin/stock/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000367s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000533s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000645s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000149s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005703s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005813s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000751s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000856s ]
+SQL: SHOW COLUMNS FROM `stock` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `stock`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `stock_trend` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 3 ORDER BY time  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 4 ORDER BY time  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 5 ORDER BY time  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.022122s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013951s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.017870s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.031100s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000684s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000823s ]
+
+[ 2015-10-11T21:05:39+08:00 ] 127.0.0.1 /index.php/Admin/stock/update.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000841s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001137s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001279s ]
+SQL: SHOW COLUMNS FROM `stock` [ RunTime:0.0021s ]
+SQL: UPDATE `stock` SET `stock_name`='测试股票1',`stock_bg`='测试1' WHERE `stock_id` = 3 [ RunTime:0.0948s ]
+SQL: SHOW COLUMNS FROM `stock_trend` [ RunTime:0.0025s ]
+SQL: DELETE FROM `stock_trend` WHERE `stock_id` = 3 [ RunTime:0.0685s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','0','0','新建新闻') [ RunTime:0.1008s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','0','0','新建新闻') [ RunTime:0.0227s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','0','0','新建新闻') [ RunTime:0.0312s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','0','0','新建新闻') [ RunTime:0.0215s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','0','0','新建新闻') [ RunTime:0.0323s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','0','0','新建新闻') [ RunTime:0.0224s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','1444262400','1000','新建新闻') [ RunTime:0.0323s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','1444269600','2310','新建新闻') [ RunTime:0.0225s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','1444701600','3432','新建新闻') [ RunTime:0.0320s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','1445644800','0','新建新闻') [ RunTime:0.0217s ]
+SQL: UPDATE `stock` SET `stock_name`='测试股票2',`stock_bg`='测试' WHERE `stock_id` = 4 [ RunTime:0.0323s ]
+SQL: DELETE FROM `stock_trend` WHERE `stock_id` = 4 [ RunTime:0.0225s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('4','1444269600','1000','新建新闻') [ RunTime:0.0324s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('4','1444276800','100','新建新闻') [ RunTime:0.0226s ]
+SQL: UPDATE `stock` SET `stock_name`='测试股票3',`stock_bg`='测试信息' WHERE `stock_id` = 5 [ RunTime:0.0319s ]
+SQL: DELETE FROM `stock_trend` WHERE `stock_id` = 5 [ RunTime:0.0219s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('5','1444564800','1000','新建新闻') [ RunTime:0.0324s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('5','1444183200','100','新建新闻') [ RunTime:0.0224s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('5','1444273200','1000','新建新闻') [ RunTime:0.0323s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('5','1444276800','500','新建新闻') [ RunTime:0.0226s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('5','1444550400','0','新建新闻') [ RunTime:0.0320s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005620s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005747s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000505s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000568s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000658s ]
+
+[ 2015-10-11T21:05:40+08:00 ] 127.0.0.1 /index.php/Admin/stock/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000577s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000684s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005576s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005674s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000505s ]
+SQL: SHOW COLUMNS FROM `stock` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `stock`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `stock_trend` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 3 ORDER BY time  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 4 ORDER BY time  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 5 ORDER BY time  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.020444s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013231s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.016523s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.029385s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000694s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000820s ]
+
+[ 2015-10-11T21:09:12+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000085s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001511s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002721s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000211s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000615s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022116s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022516s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001730s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002092s ]
+SQL: SHOW COLUMNS FROM `stock` [ RunTime:0.0093s ]
+SQL: SELECT * FROM `stock`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `stock_trend` [ RunTime:0.0093s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 3 ORDER BY time  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 4 ORDER BY time  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 5 ORDER BY time  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0106s ]
+SQL: SELECT `news_content` FROM `news` WHERE `news_id` = 1 LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000238s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.100670s ]
+NOTIC: [8] Undefined variable: stockheld D:\Programing\Web_WorkSpace\BC\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 42 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given D:\Programing\Web_WorkSpace\BC\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 42 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023677s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.085976s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.108069s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002364s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002737s ]
+
+[ 2015-10-11T21:09:15+08:00 ] 127.0.0.1 /index.php/Admin/stock/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000086s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001491s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003042s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000211s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000648s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023270s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023760s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001589s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001965s ]
+SQL: SHOW COLUMNS FROM `stock` [ RunTime:0.0088s ]
+SQL: SELECT * FROM `stock`  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `stock_trend` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 3 ORDER BY time  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 4 ORDER BY time  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 5 ORDER BY time  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000261s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.076247s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047242s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.060629s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.106414s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002296s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002691s ]
+
+[ 2015-10-11T21:09:19+08:00 ] 127.0.0.1 /index.php/Admin/stock/add/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000087s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002139s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002531s ]
+SQL: SHOW COLUMNS FROM `stock_trend` [ RunTime:0.0090s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','0','0','新建新闻') [ RunTime:0.0687s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000212s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000614s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022189s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022593s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001660s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002026s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003599s ]
+
+[ 2015-10-11T21:09:21+08:00 ] 127.0.0.1 /index.php/Admin/stock/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000086s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001516s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002142s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002536s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000211s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000617s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022078s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022520s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001693s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002056s ]
+SQL: SHOW COLUMNS FROM `stock` [ RunTime:0.0086s ]
+SQL: SELECT * FROM `stock`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `stock_trend` [ RunTime:0.0092s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 3 ORDER BY time  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 4 ORDER BY time  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 5 ORDER BY time  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000446s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.077141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049450s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.062077s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000102s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.109996s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002567s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003079s ]
+
+[ 2015-10-11T21:09:39+08:00 ] 127.0.0.1 /index.php/Admin/stock/update.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000529s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000634s ]
+SQL: SHOW COLUMNS FROM `stock` [ RunTime:0.0037s ]
+SQL: UPDATE `stock` SET `stock_name`='测试股票1',`stock_bg`='测试1' WHERE `stock_id` = 3 [ RunTime:0.0661s ]
+SQL: SHOW COLUMNS FROM `stock_trend` [ RunTime:0.0021s ]
+SQL: DELETE FROM `stock_trend` WHERE `stock_id` = 3 [ RunTime:0.0197s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','1444546800','1','新建新闻') [ RunTime:0.0878s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','0','0','新建新闻') [ RunTime:0.0701s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','0','0','新建新闻') [ RunTime:0.0295s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','0','0','新建新闻') [ RunTime:0.0324s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','0','0','新建新闻') [ RunTime:0.0222s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','0','0','新建新闻') [ RunTime:0.0323s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','0','0','新建新闻') [ RunTime:0.0223s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','1444262400','1000','新建新闻') [ RunTime:0.0324s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','1444269600','2310','新建新闻') [ RunTime:0.0223s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','1444701600','3432','新建新闻') [ RunTime:0.0321s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('3','1445644800','0','新建新闻') [ RunTime:0.0224s ]
+SQL: UPDATE `stock` SET `stock_name`='测试股票2',`stock_bg`='测试' WHERE `stock_id` = 4 [ RunTime:0.0324s ]
+SQL: DELETE FROM `stock_trend` WHERE `stock_id` = 4 [ RunTime:0.0225s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('4','1444269600','1000','新建新闻') [ RunTime:0.0323s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('4','1444276800','100','新建新闻') [ RunTime:0.0225s ]
+SQL: UPDATE `stock` SET `stock_name`='测试股票3',`stock_bg`='测试信息' WHERE `stock_id` = 5 [ RunTime:0.0318s ]
+SQL: DELETE FROM `stock_trend` WHERE `stock_id` = 5 [ RunTime:0.0223s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('5','1444183200','100','新建新闻') [ RunTime:0.0324s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('5','1444273200','1000','新建新闻') [ RunTime:0.0224s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('5','1444276800','500','新建新闻') [ RunTime:0.0323s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('5','1444550400','0','新建新闻') [ RunTime:0.0224s ]
+SQL: INSERT INTO `stock_trend` (`stock_id`,`time`,`price`,`news`) VALUES ('5','1444564800','1000','新建新闻') [ RunTime:0.0318s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006288s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006388s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000443s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000555s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000644s ]
+
+[ 2015-10-11T21:09:40+08:00 ] 127.0.0.1 /index.php/Admin/stock/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000639s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005362s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005502s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000504s ]
+SQL: SHOW COLUMNS FROM `stock` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `stock`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `stock_trend` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 3 ORDER BY time  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 4 ORDER BY time  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 5 ORDER BY time  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.021492s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014730s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.017402s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000028s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.031792s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000859s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000998s ]
+
+[ 2015-10-11T21:09:42+08:00 ] 127.0.0.1 /index.php/admin/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000713s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006241s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006355s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000550s ]
+SQL: SHOW COLUMNS FROM `stock` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `stock`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `stock_trend` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 3 ORDER BY time  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 4 ORDER BY time  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 5 ORDER BY time  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0023s ]
+SQL: SELECT `news_content` FROM `news` WHERE `news_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.023468s ]
+NOTIC: [8] Undefined variable: stockheld D:\Programing\Web_WorkSpace\BC\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 42 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given D:\Programing\Web_WorkSpace\BC\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 42 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005589s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.020107s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000029s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.025261s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000660s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000753s ]
+
+[ 2015-10-11T21:09:45+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000507s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000603s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000149s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005630s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005727s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000453s ]
+SQL: SHOW COLUMNS FROM `stock` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `stock`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `stock_trend` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 3 ORDER BY time  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 4 ORDER BY time  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `stock_trend` WHERE `stock_id` = 5 ORDER BY time  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0027s ]
+SQL: SELECT `news_content` FROM `news` WHERE `news_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.026981s ]
+NOTIC: [8] Undefined variable: stockheld D:\Programing\Web_WorkSpace\BC\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 42 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given D:\Programing\Web_WorkSpace\BC\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 42 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007300s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.022982s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000026s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.029933s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Admin\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000593s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000687s ]
+

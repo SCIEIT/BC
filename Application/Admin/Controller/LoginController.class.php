@@ -45,8 +45,8 @@ class LoginController extends BaseController {
     		session('admin.name',$userInfo['admin_name']);
     		session('admin.password',$this->encrypt($userInfo['admin_password']));
     	}else{
-    		cookie('adminid',null);
-    		cookie('adminpassword',null);
+            cookie('adminid',null);
+            cookie('adminpassword',null);
     		redirect(U('Login/index',['error'=>'用户名或密码错误']));
     	}
     }
@@ -54,8 +54,8 @@ class LoginController extends BaseController {
     	session('admin.id',null);
     	session('admin.name',null);
     	session('admin.password',null);
-    	cookie('adminid',null);
-    	cookie('adminpassword',null);
+    	setcookie("adminid", "", time()-3600);
+        setcookie("adminpassword", "", time()-3600);
     	$this->success('成功登出',U('home/index/index'),3);
     }
     public function encrypt($data)
