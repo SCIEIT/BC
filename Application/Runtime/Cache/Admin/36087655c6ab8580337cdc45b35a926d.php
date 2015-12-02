@@ -3,14 +3,16 @@
 <body style="display:none">
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="<?=U('admin/index/index')?>" class="brand-logo">logo</a>
+      <a id="logo-container" href="<?=U('admin/index/index')?>" class="brand-logo">MyBC</a>
       
       <ul id="nav-mobile" class="side-nav">
         <li><a class="waves-effect" href="<?=U('index/index')?>">主页</a></li>
         <li><a class="waves-effect" href="<?=U('news/index')?>">公告</a></li>
         <li><a class="waves-effect" href="<?=U('news/instruction')?>">免责声明</a></li>
+        <li><a class="waves-effect" href="<?=U('user/usrlist')?>">选手</a></li>
         <li><a class="waves-effect" href="<?=U('stock/index')?>">股票</a></li>
         <li><a class="waves-effect" href="<?=U('test/index')?>">题目</a></li>
+        <li><a class="waves-effect" href="<?=U('score/index')?>">改卷</a></li>
         <li><a class="waves-effect" href="<?=U('result/index')?>">结果</a></li>
       </ul>
       
@@ -20,8 +22,10 @@
         <li><a class="waves-effect" href="<?=U('index/index')?>">主页</a></li>
         <li><a class="waves-effect" href="<?=U('news/index')?>">公告</a></li>
         <li><a class="waves-effect" href="<?=U('news/instruction')?>">免责声明</a></li>
+        <li><a class="waves-effect" href="<?=U('user/usrlist')?>">选手</a></li>
         <li><a class="waves-effect" href="<?=U('stock/index')?>">股票</a></li>
         <li><a class="waves-effect" href="<?=U('test/index')?>">题目</a></li>
+        <li><a class="waves-effect" href="<?=U('score/index')?>">改卷</a></li>
         <li><a class="waves-effect" href="<?=U('result/index')?>">结果</a></li>
       </ul>
       

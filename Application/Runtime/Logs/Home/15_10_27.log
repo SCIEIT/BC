@@ -1,0 +1,40 @@
+[ 2015-10-27T19:07:06+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015481s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015604s ]
+
+[ 2015-10-27T19:07:07+08:00 ] 127.0.0.1 /index.php/Home/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000559s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000327s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.159926s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.160072s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.012182s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012292s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.097995s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069293s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.013148s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.070393s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Home\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Home\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Programing\Web_WorkSpace\BC\Application\Home\Controller\BaseController.class.php:8) D:\Programing\Web_WorkSpace\BC\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.048193s ]
+INFO: [ app_end ] --END-- [ RunTime:0.048405s ]
+

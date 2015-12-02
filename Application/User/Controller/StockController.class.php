@@ -3,6 +3,7 @@ namespace User\Controller;
 use Think\Controller;
 class StockController extends BaseController {
     public function index(){
+        $this->Checkexpire();
     	$this->initialize(session('group.name').'的股票');
         $this->assign('money',$this->getMoneyLeft(session('group.id')));
         $this->assign('stocks',$this->getStock());

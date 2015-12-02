@@ -14,6 +14,15 @@ class BaseController extends Controller {
 			redirect(U('home/login/index'));
 		}
 	}
+	protected function Checkexpire(){
+		$deadline=D('settings')->where(['key'=>'Deadline'])->getField('value');
+		if(time()>$deadline){
+            $this->error('以超过比赛时间:'.date("Y年m月d日  h:ia",$deadline),U('index/index'),3);
+        }
+        if(D('grouptodistrict')->where(['group_id'=>session('group.id')])->getField('district_id')=='0'){
+        	$this->error('以超过比赛时间!!!',U('index/index'),3);
+        }
+	}
 	protected function getMoneyLeft($GroupID){
 		return D('grouptoasset')->where(['group_id'=>$GroupID,'asset_id'=>1])->getField('amount');
 	}

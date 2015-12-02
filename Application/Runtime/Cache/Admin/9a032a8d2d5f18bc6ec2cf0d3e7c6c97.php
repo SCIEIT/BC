@@ -4,14 +4,16 @@
 <body style="display:none">
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="<?=U('admin/index/index')?>" class="brand-logo">logo</a>
+      <a id="logo-container" href="<?=U('admin/index/index')?>" class="brand-logo">MyBC</a>
       
       <ul id="nav-mobile" class="side-nav">
         <li><a class="waves-effect" href="<?=U('index/index')?>">主页</a></li>
         <li><a class="waves-effect" href="<?=U('news/index')?>">公告</a></li>
         <li><a class="waves-effect" href="<?=U('news/instruction')?>">免责声明</a></li>
+        <li><a class="waves-effect" href="<?=U('user/usrlist')?>">选手</a></li>
         <li><a class="waves-effect" href="<?=U('stock/index')?>">股票</a></li>
         <li><a class="waves-effect" href="<?=U('test/index')?>">题目</a></li>
+        <li><a class="waves-effect" href="<?=U('score/index')?>">改卷</a></li>
         <li><a class="waves-effect" href="<?=U('result/index')?>">结果</a></li>
       </ul>
       
@@ -21,8 +23,10 @@
         <li><a class="waves-effect" href="<?=U('index/index')?>">主页</a></li>
         <li><a class="waves-effect" href="<?=U('news/index')?>">公告</a></li>
         <li><a class="waves-effect" href="<?=U('news/instruction')?>">免责声明</a></li>
+        <li><a class="waves-effect" href="<?=U('user/usrlist')?>">选手</a></li>
         <li><a class="waves-effect" href="<?=U('stock/index')?>">股票</a></li>
         <li><a class="waves-effect" href="<?=U('test/index')?>">题目</a></li>
+        <li><a class="waves-effect" href="<?=U('score/index')?>">改卷</a></li>
         <li><a class="waves-effect" href="<?=U('result/index')?>">结果</a></li>
       </ul>
       
@@ -30,22 +34,44 @@
     </nav>
 </block>
 
-	<br/>
-	<div class="container row">
-	    <div class="col s12">
-	    	<h4>各组当前的现金。</h4>
-        	<div id="money"></div>
-		</div>
+	<div class="container center-align">
+		<table class="striped centered responsive-table center-align">
+		  <thead>
+		    <tr>
+		    	<th>排名</th>
+		    	<th>用户名</th>
+		        <th>小组</th>
+		        <th>成组</th>
+		        <th>赛区</th>
+		        <th>现金</th>
+		        <th>股票</th>
+		        <th><a href="<?=U('result/index',['sort'=>'asset'])?>">资产总和</a></th>
+		        <th><a href="<?=U('result/index',['sort'=>'mc'])?>">选择题分数</a></th>
+		        <th><a href="<?=U('result/index',['sort'=>'str'])?>">填空题分数</a></th>
+		        <th><a href="<?=U('result/index',['sort'=>'tot'])?>">总分</a></th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		  	<?php $i=1;?>
+		  	<?php foreach ($result as $group): ?>
+			    <tr>
+			    	<td><?=$i?></td>
+			    	<td><?=$group['user_mobile']?></td>
+			    	<td><?=$group['group_id']?></td>
+			    	<td><?=$group['is_group']?'成组':'单人'?></td>
+			    	<td><?=$group['district_id']=='1'?'深圳':'广州'?></td>
+			    	<td><?=$group['money']?></td>
+			    	<td><?=$group['stock']?></td>
+			    	<td><?=$group['asset']?></td>
+			    	<td><?=$group['mc']?></td>
+			    	<td><?=$group['str']?></td>
+			    	<td><?=$group['tot']?></td>
+			    	<?php $i++;?>
+			    </tr>
+			<?php endforeach ?>
+		  </tbody>
+		</table>
 	</div>
-	<hr/>
-	<br/>
-	<div class="container row">
-	    <div class="col s12">
-	    	<h4>各组当前股票市值。</h4>
-        	<div id="stock"></div>
-		</div>
-	</div>
-	<hr/>
 
 <footer class="page-footer teal">
   
@@ -59,34 +85,6 @@
   <!--  Scripts-->
 
 	<script src="/Public/chartist/chartist.min.js"></script>
-	<script>
-		$(function(){
-			new Chartist.Bar('#money', {
-			  labels: [<?php foreach ($groupresult['cash'] as $group) { echo '\''.$group['group_name'].'\','; } ?>],
-			  series: [<?php foreach ($groupresult['cash'] as $group) { echo '\''.$group['amount'].'\','; } ?>]
-			}, {
-			  distributeSeries: true,
-			  height:450
-			});
-			new Chartist.Bar('#stock', {
-			  labels: ['Q1', 'Q2', 'Q3', 'Q4'],
-			  series: [
-			    [800000, 1200000, 1400000, 1300000],
-			    [200000, 400000, 500000, 300000],
-			    [100000, 200000, 400000, 600000]
-			  ]
-			}, {
-			  stackBars: true,
-			  height:450
-			}).on('draw', function(data) {
-			  if(data.type === 'bar') {
-			    data.element.attr({
-			      style: 'stroke-width: 30px'
-			    });
-			  }
-			});
-		});
-	</script>
 
 <script>
   window.onload=function(){

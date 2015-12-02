@@ -1,0 +1,64 @@
+<extend name="./Application/Admin/View/base.html"/>
+<block name="body">
+  <h2 class="center-align">题目批改（第{$page}页）第{$groupid}，<?=$isgroup?'成组':'单人'?></h2>
+  <form class="container" action="<?=U('score/index')?>" enctype="multipart/form-data" method="get">
+    <div class="row">
+      <div class="input-field col s5 offset-s2">
+        <input id="page" name="page" type="number" class="validate">
+        <label for="page">页码（总页数：{$count}）</label>
+      </div>
+      <button class="btn btn-large waves-effect waves-light col s2 offset-s1" type="submit">跳转
+        <i class="fa fa-save right"></i>
+      </button>
+    </div>
+  </form>
+  <div class="container" id="escaped">
+  <form class="container" action="<?=U('score/index',['page'=>$page+1])?>" enctype="multipart/form-data" method="post">
+    <input type="hidden" name="groupid" value="<?=$groupid?>"/>
+      <ul class="collapsible popout" data-collapsible="accordion">
+        <?php
+         foreach ($questions as $question) { ?>
+          <li>
+            <div class="collapsible-header">长度：<?=strlen($question['question_ans'])?><i class="fa fa-file-word-o"></i>
+            </div>
+            <div class="collapsible-body">
+              <blockquote><?=$question['question_content']?></blockquote>
+              <hr/>
+              <div class="container">
+                <h6>选手作答：</h6>
+                <p><?=$question['question_ans']?></p>
+              </div>
+              <hr/>
+              <div class="input-field col s6">
+                <i class="fa fa-check prefix"></i>
+                <input id="<?=$question['question_id']?>" name="question[<?=$question['question_id']?>]" value="<?php
+                if(empty($question['question_score'])){
+                  if(empty($question['question_ans'])){
+                    echo '0';
+                  }
+                }else{
+                  echo $question['question_score'];
+                }
+                  ?>" type="number" class="validate">
+                <label for="<?=$question['question_id']?>">分数</label>
+              </div>
+            </div>
+          </li>
+          <?php } ?>
+      </ul>
+      <div class="container">
+        <a class="waves-effect waves-light btn <?=$page=='1'?"disabled":""?>" href="<?=U('score/index',['page'=>$page-1])?>" >上一页</a>
+        <a class="waves-effect waves-light btn <?=$pageMax?"disabled":""?>" href="<?=U('score/index',['page'=>$page+1])?>">下一页</a>
+        <button class="btn waves-effect waves-light red accent-3" type="submit">保存并下一页
+          <i class="fa fa-save right"></i>
+        </button>
+      </div>
+    </form>
+    <br/>
+  </div>
+</block>
+<block name="customJS">
+  <script type="text/javascript">
+      document.getElementById('escaped').innerHTML=unescape(document.getElementById('escaped').innerHTML);
+  </script>
+</block>

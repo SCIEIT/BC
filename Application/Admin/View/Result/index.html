@@ -3,55 +3,45 @@
 	<link rel="stylesheet" href="__PUBLIC__/chartist/chartist.min.css">
 </block>
 <block name="body">
-	<br/>
-	<div class="container row">
-	    <div class="col s12">
-	    	<h4>各组当前的现金。</h4>
-        	<div id="money"></div>
-		</div>
+	<div class="container center-align">
+		<table class="striped centered responsive-table center-align">
+		  <thead>
+		    <tr>
+		    	<th>排名</th>
+		    	<th>用户名</th>
+		        <th>小组</th>
+		        <th>成组</th>
+		        <th>赛区</th>
+		        <th>现金</th>
+		        <th>股票</th>
+		        <th><a href="<?=U('result/index',['sort'=>'asset'])?>">资产总和</a></th>
+		        <th><a href="<?=U('result/index',['sort'=>'mc'])?>">选择题分数</a></th>
+		        <th><a href="<?=U('result/index',['sort'=>'str'])?>">填空题分数</a></th>
+		        <th><a href="<?=U('result/index',['sort'=>'tot'])?>">总分</a></th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		  	<?php $i=1;?>
+		  	<?php foreach ($result as $group): ?>
+			    <tr>
+			    	<td><?=$i?></td>
+			    	<td><?=$group['user_mobile']?></td>
+			    	<td><?=$group['group_id']?></td>
+			    	<td><?=$group['is_group']?'成组':'单人'?></td>
+			    	<td><?=$group['district_id']=='1'?'深圳':'广州'?></td>
+			    	<td><?=$group['money']?></td>
+			    	<td><?=$group['stock']?></td>
+			    	<td><?=$group['asset']?></td>
+			    	<td><?=$group['mc']?></td>
+			    	<td><?=$group['str']?></td>
+			    	<td><?=$group['tot']?></td>
+			    	<?php $i++;?>
+			    </tr>
+			<?php endforeach ?>
+		  </tbody>
+		</table>
 	</div>
-	<hr/>
-	<br/>
-	<div class="container row">
-	    <div class="col s12">
-	    	<h4>各组当前股票市值。</h4>
-        	<div id="stock"></div>
-		</div>
-	</div>
-	<hr/>
 </block>
 <block name="customJS">
 	<script src="__PUBLIC__/chartist/chartist.min.js"></script>
-	<script>
-		$(function(){
-			new Chartist.Bar('#money', {
-			  labels: [<?php foreach ($groupresult['cash'] as $group) {
-			  	echo '\''.$group['group_name'].'\',';
-			  } ?>],
-			  series: [<?php foreach ($groupresult['cash'] as $group) {
-			  	echo '\''.$group['amount'].'\',';
-			  } ?>]
-			}, {
-			  distributeSeries: true,
-			  height:450
-			});
-			new Chartist.Bar('#stock', {
-			  labels: ['Q1', 'Q2', 'Q3', 'Q4'],
-			  series: [
-			    [800000, 1200000, 1400000, 1300000],
-			    [200000, 400000, 500000, 300000],
-			    [100000, 200000, 400000, 600000]
-			  ]
-			}, {
-			  stackBars: true,
-			  height:450
-			}).on('draw', function(data) {
-			  if(data.type === 'bar') {
-			    data.element.attr({
-			      style: 'stroke-width: 30px'
-			    });
-			  }
-			});
-		});
-	</script>
 </block>

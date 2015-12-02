@@ -3,6 +3,7 @@ namespace User\Controller;
 use Think\Controller;
 class TestController extends BaseController {
     public function index(){
+        $this->Checkexpire();
     	$this->initialize(session('group.name').'的题目');
     	$mcarr=D('questions')->where('choice_num>0')->select();
     	$sqarr=D('questions')->where(['choice_num'=>0])->select();

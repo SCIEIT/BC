@@ -72,6 +72,7 @@ class UserController extends BaseController {
                     }else{
                         D('grouptodistrict')->add(['group_id'=>$group_id,'district_id'=>$district]);
                     }
+                    D('groups')->where(['group_id'=>$group_id])->save(['is_group'=>$is_group]);
                     echo '跳过：'.$mobile.'<br/>';
                     ob_flush();
                     flush();

@@ -13,6 +13,7 @@
         <li><a class="waves-effect" href="<?=U('user/usrlist')?>">选手</a></li>
         <li><a class="waves-effect" href="<?=U('stock/index')?>">股票</a></li>
         <li><a class="waves-effect" href="<?=U('test/index')?>">题目</a></li>
+        <li><a class="waves-effect" href="<?=U('score/index')?>">改卷</a></li>
         <li><a class="waves-effect" href="<?=U('result/index')?>">结果</a></li>
       </ul>
       
@@ -25,6 +26,7 @@
         <li><a class="waves-effect" href="<?=U('user/usrlist')?>">选手</a></li>
         <li><a class="waves-effect" href="<?=U('stock/index')?>">股票</a></li>
         <li><a class="waves-effect" href="<?=U('test/index')?>">题目</a></li>
+        <li><a class="waves-effect" href="<?=U('score/index')?>">改卷</a></li>
         <li><a class="waves-effect" href="<?=U('result/index')?>">结果</a></li>
       </ul>
       
